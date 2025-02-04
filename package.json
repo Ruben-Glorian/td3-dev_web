@@ -1,0 +1,23 @@
+{
+  "name": "td3",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "esbuild main.js --bundle --outfile=out.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ruben-Glorian/td3-dev_web.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Ruben-Glorian/td3-dev_web/issues"
+  },
+  "homepage": "https://github.com/Ruben-Glorian/td3-dev_web#readme",
+  "description": "",
+  "dependencies": {
+    "esbuild": "^0.24.2"
+  }
+}
