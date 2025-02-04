@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "dev": "live-server .",
     "build": "esbuild main.js --bundle --outfile=out.js"
   },
   "repository": {
@@ -18,6 +19,7 @@
   "homepage": "https://github.com/Ruben-Glorian/td3-dev_web#readme",
   "description": "",
   "dependencies": {
-    "esbuild": "^0.24.2"
+    "esbuild": "^0.24.2",
+    "live-server": "^1.2.0"
   }
 }
