@@ -11,6 +11,10 @@ class Cart {
             this.contenu.push({ product, qty: 1 });
         }
     }
+
+    genericCalc(callback) {
+        return this.contenu.reduce(callback, 0);
+    }
 }
 
-export default Cart ;
+export default Cart;
