@@ -15,6 +15,12 @@ class Cart {
     genericCalc(callback) {
         return this.contenu.reduce(callback, 0);
     }
+
+    emptyCart() {
+        this.contenu = [];
+    }
 }
 
-export default Cart;
+const cart = new Cart();
+
+export default cart;

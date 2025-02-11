@@ -1,6 +1,7 @@
 import Products from './products.js';
 import { search } from './products.js';
-import buildProductsList from './ui.js';
+import buildProductsList, {displayCart} from './ui.js';
+import cart from './cart.js';
 
 // Function to initialize the app
 function init() {
@@ -14,7 +15,13 @@ function init() {
             buildProductsList(searchResults);
         }
     });
+
+    const emptyCartLink = document.getElementById('empty-cart');
+    emptyCartLink.addEventListener('click', (event) => {
+        cart.emptyCart();
+        displayCart();
+    });
 }
 
 // Export the init function
-export default init ;
+export default init;

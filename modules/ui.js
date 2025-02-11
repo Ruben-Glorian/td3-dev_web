@@ -1,6 +1,4 @@
-import Cart from './cart.js'; // Import the Cart class from the cart.js module
-
-const cart = new Cart();
+import cart from './cart.js'; // Import the Cart class from the cart.js module
 
 function displayProduct(product) {
     const list = document.getElementById('product-list');
@@ -68,4 +66,5 @@ function displayCart() {
     document.getElementById('total-products').innerText = totalProducts;
 }
 
-export default buildProductsList;
+// Export the buildProductsList function as the default export and the displayCart function as a named export
+export { buildProductsList as default, displayCart };
