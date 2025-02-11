@@ -1,14 +1,19 @@
-import * as products from './products.js';
-import * as ui from './ui.js';
+import Products from './products.js';
+import { search } from './products.js';
+import buildProductsList from './ui.js';
 
 // Function to initialize the app
-async function init() {
-    try {
-        const productList = await products.getProducts();
-        ui.buildProductsList(productList);
-    } catch (error) {
-        console.error('Failed to initialize app:', error);
-    }
+function init() {
+    buildProductsList(Products);
+
+    const searchField = document.getElementById('search-field');
+    searchField.addEventListener('keyup', (event) => {
+        if (event.key === 'Enter') {
+            const keywords = searchField.value;
+            const searchResults = search(keywords);
+            buildProductsList(searchResults);
+        }
+    });
 }
 
 // Export the init function

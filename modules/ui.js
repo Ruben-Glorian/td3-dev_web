@@ -1,10 +1,8 @@
-import Products from "./products.js";
-
 function displayProduct(product) {
     const list = document.getElementById('product-list');
     list.innerHTML += `<div className="product">
             <div className="photo">
-                <img src="${product.image}" alt="${product.ref}">
+                ${product.ref}
                 <a className="product-add2cart">
                     <span className="mdi mdi-cart"></span>
                 </a>
@@ -22,9 +20,10 @@ function displayProduct(product) {
 }
 
 function buildProductsList(Products) {
-    for (let product of Products) {
-        displayProduct(product) ;
-    }
+    document.getElementById('product-list').innerHTML = '';
+    Products.forEach(product => {
+        displayProduct(product);
+    });
 }
 
-export default buildProductsList() ;
+export default buildProductsList ;
