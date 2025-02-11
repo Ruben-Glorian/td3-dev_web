@@ -6,7 +6,7 @@ import buildProductsList from './ui.js';
 function init() {
     buildProductsList(Products);
 
-    const searchField = document.getElementById('search-field');
+    const searchField = document.getElementById('product-search');
     searchField.addEventListener('keyup', (event) => {
         if (event.key === 'Enter') {
             const keywords = searchField.value;

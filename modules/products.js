@@ -10,7 +10,7 @@ class Product {
     }
 }
 
-var Products = new Array(Product) ;
+var Products = [] ;
 Products.push(new Product("Bicyclette blue",120.00, "Une bicyclette blue fabriquée en France."));
 Products.push(new Product("Crayon rouge", 0.25, "Un crayon à papier rouge."));
 Products.push(new Product("Barre à mine", 25.00, "Une barre à mine en acier."));
